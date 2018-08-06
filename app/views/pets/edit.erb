@@ -14,7 +14,7 @@
   <br><br>
 
   <% @owners.each do |owner| %>
-    <input type="radio" name="pet[owner_id]" value="<%=owner.id%> id="<%=owner.id%>"><%='selected' if @pet.owner == owner%><%=owner.name%>
+    <input type="radio" name="pet[owner_id]" value="<%=owner.id%> id="<%=owner.id%>"><%='chosen' if @pet.owner == owner%><%=owner.name%>
   <% end %>
 
   <br><br>
