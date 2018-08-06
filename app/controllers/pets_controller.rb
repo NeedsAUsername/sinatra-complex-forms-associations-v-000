@@ -30,7 +30,7 @@ class PetsController < ApplicationController
   end
 
   post '/pets/:id' do
-    @pet = Pet.find(params[:id])
+    @pet = Pet.find_by(params[:id])
     if Owner.find(params[:pet][:owner_id])
       @pet.update(params[:pet])
     end
